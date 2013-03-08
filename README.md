@@ -9,7 +9,7 @@ By default read only filter redirects back with a flash error message. However r
 Add this line to your application's Gemfile:
 
 ```ruby
-	gem 'read_only_filter', '~> 1.0.0'
+gem 'read_only_filter', '~> 1.0.0'
 ```
     
 	
@@ -38,8 +38,8 @@ need to create an initializer file in your projects config initializers director
 
 	one liner:
 	
-	```shell
-	$ echo 'require \'read_only_filter\'' config/initializers/read_only_filter.rb
+	```
+	$ echo "require 'read_only_filter'" > config/initializers/read_only_filter.rb 
 	```
 		
 2. ####Enable read only filter in your project:
