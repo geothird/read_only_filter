@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.version       = ReadOnlyFilter::Rails::VERSION
   gem.authors       = ["Geo"]
   gem.email         = ["geo.marshall@gmail.com"]
-  gem.description   = %q{Read only support for Rails ActiveController, allows for protection of controller actions from create/update/destroy.}
+  gem.description   = %q{Read only filter for Rails ActiveController, allows for protection of controller actions from create/update/destroy.}
   gem.summary       = %q{Enable read only protection for rails controller actions.}
   gem.homepage      = ""
 

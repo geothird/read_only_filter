@@ -13,7 +13,7 @@ module ReadOnlyFilter
   # specific before_filters
   ActionController::Base.module_eval do
     # Turn read only on or off true/false
-    attr_accessor :toggle_read_only
+    attr_accessor :read_only_enabled
 
     class << self
       # attr for storing methods marked read only
@@ -71,15 +71,15 @@ module ReadOnlyFilter
       super
     end
     # Read only method is a before filter that prevents access
-    # to controllers based on if the controller is toggled
-    # to be read only `toggle_read_only` and if the method
+    # to controllers based on if the controller is setup
+    # to be read only `read_only_enabled` and if the method
     # is marked as read only through the read_only_methods attribute.
     #
     # By default read only redirects back with an error message
     # To include instead render status code error template see usage.
     #
     def read_only_method
-      if @toggle_read_only
+      if @read_only_enabled
         # Setup defaults if not already initialized
         self.class.__init_params
 

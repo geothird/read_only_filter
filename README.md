@@ -48,13 +48,13 @@ need to create an initializer file in your projects config initializers director
 	your `:signed_in_user` or other authentication filter.
 	
 	```ruby
-	@enable_read_only = true
+	@read_only_enabled = true
 	```
 	
 	It can also be enabled from a user flag to mark specific users as read_only.
 	
 	```ruby
-	@enable_read_only = current_user.read_only
+	@read_only_enabled = current_user.read_only
 	```
 	
 	   
